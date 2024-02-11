@@ -1,0 +1,10 @@
+{% if is_true %}
+    <h1>HEllo {{list.0}}</h1>
+{% else %}
+    <h1>HEllo {{list.1}}</h1>
+{% endif %}
+    <h2>Your age is {{age}}</h2>
+
+{% for it in list %}
+    <p>{{it}}</p>
+{% endfor %} 

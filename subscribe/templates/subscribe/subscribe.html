@@ -1,0 +1,17 @@
+{% load static %} 
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'subscribe/c.css' %}">
+</head>
+<body>
+    <div><img src="{% static 'subscribe/m.png'  %}" alt ="email" style="width:50px;height:60px;  display: block;
+    margin-left: auto; margin-right: auto;"></div>
+<div><form method="post">
+    {% csrf_token %} 
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form></div>
+<div> <button onclick = "pop()">Help me </button> </div>
+<script  src="{% static 'subscribe/main.js' %}" > </script>
+</body>
+</html>

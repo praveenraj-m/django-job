@@ -1,0 +1,23 @@
+{% load static %} 
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/bootstrap3/css/bootstrap.min.css' %}">
+    <title>Job description</title>
+</head>
+<body class="bg-primary">
+
+    <div class="container well">
+
+    {% if id == 0  %}
+    return redirect("/")
+{% endif %}
+<button  class="btn btn-primary"><a href="{% url "job_list" %}" style="color: white; text-decoration: none;">Home</a></button>
+<h1 class="text-primary"> Job title: {{job.title}}</h1>
+<h3 class="text-primary"> Job description: {{job.description}} </h3>
+<h3 class="text-primary"> Salary: {{job.salary}} </h3> 
+<h3 class="text-primary"> Date: {{job.date}}
+<h3 class="text-primary"> Location: {{job.location}} </h3> 
+<h3 class="text-primary">Expiry: {{job.expiry}} </h3>
+</div>
+</body>
+</html>

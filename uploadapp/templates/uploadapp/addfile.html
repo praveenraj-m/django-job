@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add File</title>
+</head>
+<body>
+   
+    <form method="post", enctype ="multipart/form-data">
+        {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Upload</button>
+    </form> 
+    {% if saved_obj %}
+    <h2>Upload Successful: {{saved_file_obj.file.url}}</h2>
+    <h2>Upload Successful: {{saved_file_obj.file.description}}</h2>
+    {% endif %}
+</body>
+</html>
+
+   
+
+

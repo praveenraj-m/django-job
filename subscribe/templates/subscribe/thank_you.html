@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'subscribe/main.css' %}">
+    <title>Thank You</title>
+</head>
+<body>
+<div class="centered-container">
+       <span> <h1>Thank you for the subscription...</h1></span>
+       <hr><br>
+
+    <span style="background-color:lightblue; padding: 10px; color: white;">
+            <a href="{% url 'job_list' %}" style="color: white; text-decoration: none;">
+            <b>Click here to go to home</b>
+        </a>
+    </span>
+</div>
+</body>
+</html>

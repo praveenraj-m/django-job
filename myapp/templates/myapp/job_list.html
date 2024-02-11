@@ -1,0 +1,38 @@
+{% load static %} 
+{% load bootstrap3 %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/bootstrap3/css/bootstrap.min.css' %}">
+    <title>Job Home</title>
+</head>
+<body class="bg-primary">
+    <div class="container d-flex align-items-center text-center">
+        <h1>JOB PORTAL</h1>
+    </div>
+<ul class="">
+{% for job in jobs  %}
+    
+<li class="container well" style ="list-style-type:none; background-color: #3498db; padding: 5px; color: white; display: inline-block; display: inline-block; margin: 0;">
+    <div class="col-md-4"  >
+    <h1 >{{job.title}}</h1> 
+    </div>
+    <div class="col-md-4 text-center">
+        <h3 >💸: {{job.salary}} </h3>
+    </div>
+    <div class="col-md-4 text-right">
+    <button class="btn btn-default">
+        <a href ="{% url "job_home" job.id %}" style="text-decoration:none;">view job</a>
+    </button>
+    </div>
+</li>
+<li style="list-style-type:none;">   <br>
+</li> 
+{% endfor %}
+</ul>
+<hr>
+<div class="text-center">
+    <span style="background-color: #3498db; padding: 10px; color: white;"><a href="{% url 'subscribe' %}" style="color: white; text-decoration: none;"><b>Subscribe for latest job updates</b></a></span>
+</div>
+
+</body>
+</html>
