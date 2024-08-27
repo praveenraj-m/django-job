@@ -4,8 +4,7 @@
 
 ## Overview
 
-This is a job portal web application built with Django, allowing users to subscribe to receive job updates.
-
+This is a job portal web application allowing users to browse the latest Job listings on the website.
 ## Features
 
 - **Job Listings:** Browse and search for jobs based on various criteria.
